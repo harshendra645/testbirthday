@@ -1,9 +1,15 @@
 body{
   background-color: pink;
-
-  background-image: linear-gradient(#1d2d50,#0f4c75,#9d65c9,#d789d7,#fff);
+  
+  background-image: linear-gradient(#020202, #020202,#1d2d50,#0f4c75,#9d65c9,#d789d7,#fff);
 }
 
+
+canvas {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+}
 .container-fluid{
   padding: 1% 8% 30%;
 }
@@ -27,13 +33,13 @@ a:hover{
 .Mwishes{
 
   font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
+  font-size: 5.3rem;
 }
 .wishes{
+  text-align: center;
   padding-top:  50px;
+  padding-bottom: 5%;
 }
-
-
 
 
 
@@ -41,8 +47,8 @@ a:hover{
 .image{
   position: relative;
   top: 0;
-  left: 33%;
-  width: 40%;
+  left: 15%;
+  width: 60%;
   height: auto;
   border-radius: 5%;
   transform: rotate(-25deg);
@@ -50,9 +56,9 @@ a:hover{
 }
 .image2{
   position: relative;
-  top: 10%;
-  left: 36%;
-  width: 40%;
+  top: 9%;
+  left: 15%;
+  width: 60%;
   height: auto;
   border-radius: 5%;
   transform: rotate(23deg);
@@ -60,12 +66,32 @@ a:hover{
 }
 .image3{
   position: relative;
-  top: 15%;
-  left: 38%;
-  width: 33%;
+  top: 0;
+  left: 16%;
+  width: 60%;
   height: auto;
   border-radius: 5%;
-  transform: rotate(-13deg);
+  transform: rotate(-18deg);
+    cursor: pointer;
+}
+.image4{
+  position: relative;
+  top: 0;
+  left: 12%;
+  width: 75%;
+  height: auto;
+  border-radius: 5%;
+  transform: rotate(18deg);
+    cursor: pointer;
+}
+.image5{
+  position: relative;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+  border-radius: 5%;
+  /*transform: rotate(18deg);*/
     cursor: pointer;
 }
 /* Navigation Bar */
@@ -95,235 +121,15 @@ a:hover{
 
 
 
-
-
-
-
-
-/* // None of this CSS is required for the gallery and lightbox to function.
-
-// --- BEGIN: crop images --- //
-// Optional CSS for cropping images that aren't all the same size.
-
-// Use Bootstrap breakpoints for consistency.
-$bootstrap-sm: 576px;
-$bootstrap-md: 768px;
-$bootstrap-lg: 992px;
-$bootstrap-xl: 1200px;
-
-// Crop thumbnail images.
-#gallery {
-
-  img {
-    height: 75vw;
-    object-fit: cover;
-
-    @media (min-width: $bootstrap-sm) {
-      height: 35vw;
-    }
-
-    @media (min-width: $bootstrap-lg) {
-      height: 18vw;
-    }
-  }
+/*charater section*/
+h3{
+  font-family: "Montserrat-bold"
 }
 
-
-// Crop images in lightbox.
-.carousel-item {
-
-  img {
-    height: 60vw;
-    object-fit: cover;
-
-    @media (min-width: $bootstrap-sm) {
-      height: 350px;
-    }
-  }
+#S2{
+  padding: 5% 8%;
+ text-align: center;
 }
-
-// --- END: crop images --- //
-
-
-// --- BEGIN: custom styling demo --- //
-// An example of custom styling for gallery and lightbox, to show what's possible in terms of aesthetic customization.
-
-* {
-  transition: 0.3s;
+.charater-box{
+ padding: 3%;
 }
-
-#gallery.custom {
-  padding: 0 15px;
-
-  img {
-    display: block;
-    margin: 15px 0;
-    border-radius: 300px 30px 300px 300px;
-
-    &:hover {
-      border-radius: 30px 90px 30px 30px;
-    }
-  }
-}
-
-#exampleModal.custom {
-  .modal-content {
-    background: none;
-    border: none;
-  }
-
-  .modal-header {
-    border:none;
-
-    button {
-      background: none;
-      border-radius: 100px 100px 0 0;
-      padding: 5px 10px;
-      opacity: 1;
-      position: relative;
-      top: 3px;
-      border: solid 2px white;
-
-      @media (min-width: $bootstrap-lg) {
-        top: 15px;
-      }
-
-      &:hover {
-        top: 3px;
-      }
-    }
-
-    span {
-      color: white;
-    }
-  }
-
-  .modal-body {
-    padding: 0;
-    border: none;
-    position: relative;
-
-    &::before, &::after {
-      content: '';
-      height: 50px;
-      width: 50px;
-      display: block;
-      position: absolute;
-      background: white;
-      border-radius: 3px 10px;
-
-      @media (min-width: $bootstrap-md) {
-        border-radius: 3px 30px;
-        height: 100px;
-        width: 100px;
-      }
-    }
-
-    &::before {
-      top: -5px;
-      left: -5px;
-
-      @media (min-width: $bootstrap-md) {
-        top: -15px;
-        left: -15px;
-      }
-    }
-
-    &::after {
-      bottom: -5px;
-      right: -5px;
-      z-index: -1;
-
-      @media (min-width: $bootstrap-md) {
-        bottom: -15px;
-        right: -15px;
-      }
-    }
-  }
-
-  .modal-footer {
-    border: none;
-    margin-top: 60px;
-
-    @media (min-width: $bootstrap-lg) {
-      margin-top: 40px;
-    }
-
-    .btn {
-      margin: auto;
-      border: solid 2px white;
-      background: none;
-      text-transform: uppercase;
-      font-size: 0.8em;
-      letter-spacing: 0.1em;
-      font-weight: bold;
-      padding: 0.2em 0.7em;
-
-      &:hover {
-        background: white;
-        color: black;
-      }
-    }
-  }
-
-  .carousel-control-prev, .carousel-control-next {
-    font-size: 2em;
-    top: auto;
-    opacity: 1;
-    bottom: -52px;
-
-    @media (min-width: $bootstrap-md) {
-      top: 0;
-      opacity: 0.5;
-      bottom: 0;
-    }
-  }
-
-  .carousel-control-next-icon,  .carousel-control-prev-icon {
-    height: 30px;
-    width: 30px;
-  }
-
-  .carousel-control-prev {
-    @media (min-width: $bootstrap-md) {
-      left: -90px;
-    }
-  }
-
-  .carousel-control-next {
-    @media (min-width: $bootstrap-md) {
-      right: -90px;
-    }
-  }
-
-  .carousel-indicators {
-    bottom: -60px;
-
-    @media (min-width: $bootstrap-lg) {
-      bottom: -30px;
-    }
-
-    li {
-      height: 30px;
-      border-radius: 100px;
-      background: none;
-      border: solid 2px white;
-
-      @media (min-width: $bootstrap-lg) {
-        height: 10px;
-      }
-
-      &:hover {
-        background: white;
-      }
-
-      &.active {
-        background: white;
-      }
-    }
-  }
-}
-
-// --- END: custom styling demo --- //
-
- */
