@@ -36,14 +36,20 @@ a:hover{
   font-size: 5.3rem;
 }
 .wishes{
+    position: absolute;
+  left: 20%;
   text-align: center;
   padding-top:  50px;
-  padding-bottom: 5%;
+  
 }
 
 
 
 /* Rotate Image */
+.allpho{
+  padding-top: 25%;
+}
+
 .image{
   position: relative;
   top: 0;
